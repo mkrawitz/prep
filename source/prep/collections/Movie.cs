@@ -31,7 +31,7 @@ namespace prep.collections
     public override int GetHashCode()
     {
         return
-            (title ?? 2).GetHashCode() ^
+            (title ?? "").GetHashCode() ^
             (production_studio ?? new ProductionStudio()).GetHashCode() ^
             (genre ?? new Genre()).GetHashCode() ^
             rating.GetHashCode() ^
