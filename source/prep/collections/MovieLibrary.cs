@@ -19,7 +19,10 @@ namespace prep.collections
 
     public void add(Movie movie)
     {
-      throw new NotImplementedException();
+            if ( !movies.Contains(movie) )
+            {
+                movies.Add(movie);
+            }
     }
 
     public IEnumerable<Movie> sort_all_movies_by_title_descending()
