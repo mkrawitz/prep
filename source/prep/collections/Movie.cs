@@ -19,23 +19,27 @@ namespace prep.collections
         else
         {
             return
-                (title ?? "").Equals(movieObj.title ?? "") &&
+                (title ?? "").Equals(movieObj.title ?? "");
+            /*
+            &&
                 (production_studio ?? new ProductionStudio()).Equals(movieObj.production_studio ??
                                                                      new ProductionStudio()) &&
                 (genre ?? new Genre()).Equals(movieObj.genre ?? new Genre()) &&
                 (rating == movieObj.rating) &&
-                (date_published.Equals(movieObj.date_published));
+                (date_published.Equals(movieObj.date_published)); */
         }
     }
 
     public override int GetHashCode()
     {
         return
-            (title ?? "").GetHashCode() ^
+            (title ?? "").GetHashCode();
+        /*
+        ^
             (production_studio ?? new ProductionStudio()).GetHashCode() ^
             (genre ?? new Genre()).GetHashCode() ^
             rating.GetHashCode() ^
-            date_published.GetHashCode();
+            date_published.GetHashCode(); */
     }
   }
 }
